@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.color-box{
+    display: flex;
+    flex-wrap: wrap;
+    height: 50vh;
+    
+}
+
+.color{
+    width: 33.33334%;
+    border: 2px solid black;
+}
+
+.color1{
+    background-color: red;
+}
+.color2{
+    background-color: pink;
+}
+
+.color3{
+    background-color: green;
+}
+
+.color4{
+    background-color: yellow;
+}
+
+.color5{
+    background-color:darkturquoise;
+}
+
+.color6{
+    background-color:mediumspringgreen;
+}
+
+
+.selected-color{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: grey;
+}
+

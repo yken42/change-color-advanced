@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <ol class="color-box">
+        <li class="color color1"></li>
+        <li class="color color2"></li>
+        <li class="color color3"></li>
+        <li class="color color4"></li>
+        <li class="color color5"></li>
+        <li class="color color6"></li>
+      </ol>
+      <div class="selected-color">Selected Color</div>
+    </div>
+
+    <script>
+      var selectedColor = document.querySelector(".selected-color");
+      var colorBox = document.querySelector(".color-box");
+
+      colorBox.addEventListener("click", changeColor);
+
+      function changeColor(event) {
+        var click = event.target;
+        var colorClicked = window.getComputedStyle(click).backgroundColor;
+        selectedColor.style.backgroundColor = colorClicked;
+      }
+
+      var colorsList = ["purple","orange","blue","lightcoral","darkslategray","brown"];
+
+      for (var i = 0; i < colorsList.length; i++) {
+        var newColor = document.createElement("li");
+        newColor.classList.add("color", `color${i + 7}`);
+        newColor.style.backgroundColor = colorsList[i];
+        colorBox.appendChild(newColor);
+      }
+    </script>
+  </body>
+</html>
